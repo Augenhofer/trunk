@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LaPassDataSet" targetNamespace="http://tempuri.org/LaPassDataSet.xsd" xmlns:mstns="http://tempuri.org/LaPassDataSet.xsd" xmlns="http://tempuri.org/LaPassDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="LaPass_ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="LaPass_ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Feuchte_Rapport.Properties.Settings.GlobalReference.Default.LaPass_ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="LaPassDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="LaPassDataSet" msprop:Generator_UserDSName="LaPassDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PCI_Maintenance" msprop:Generator_TableClassName="PCI_MaintenanceDataTable" msprop:Generator_TableVarName="tablePCI_Maintenance" msprop:Generator_RowChangedName="PCI_MaintenanceRowChanged" msprop:Generator_TablePropName="PCI_Maintenance" msprop:Generator_RowDeletingName="PCI_MaintenanceRowDeleting" msprop:Generator_RowChangingName="PCI_MaintenanceRowChanging" msprop:Generator_RowEvHandlerName="PCI_MaintenanceRowChangeEventHandler" msprop:Generator_RowDeletedName="PCI_MaintenanceRowDeleted" msprop:Generator_RowClassName="PCI_MaintenanceRow" msprop:Generator_UserTableName="PCI_Maintenance" msprop:Generator_RowEvArgName="PCI_MaintenanceRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:dateTime" />
+              <xs:element name="Time" msprop:Generator_ColumnVarNameInTable="columnTime" msprop:Generator_ColumnPropNameInRow="Time" msprop:Generator_ColumnPropNameInTable="TimeColumn" msprop:Generator_UserColumnName="Time">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Shift" msprop:Generator_ColumnVarNameInTable="columnShift" msprop:Generator_ColumnPropNameInRow="Shift" msprop:Generator_ColumnPropNameInTable="ShiftColumn" msprop:Generator_UserColumnName="Shift">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Remark" msprop:Generator_ColumnVarNameInTable="columnRemark" msprop:Generator_ColumnPropNameInRow="Remark" msprop:Generator_ColumnPropNameInTable="RemarkColumn" msprop:Generator_UserColumnName="Remark">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Reporter" msprop:Generator_ColumnVarNameInTable="columnReporter" msprop:Generator_ColumnPropNameInRow="Reporter" msprop:Generator_ColumnPropNameInTable="ReporterColumn" msprop:Generator_UserColumnName="Reporter" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Humidity" msprop:Generator_TableClassName="HumidityDataTable" msprop:Generator_TableVarName="tableHumidity" msprop:Generator_TablePropName="Humidity" msprop:Generator_RowDeletingName="HumidityRowDeleting" msprop:Generator_RowChangingName="HumidityRowChanging" msprop:Generator_RowEvHandlerName="HumidityRowChangeEventHandler" msprop:Generator_RowDeletedName="HumidityRowDeleted" msprop:Generator_UserTableName="Humidity" msprop:Generator_RowChangedName="HumidityRowChanged" msprop:Generator_RowEvArgName="HumidityRowChangeEvent" msprop:Generator_RowClassName="HumidityRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HumidityID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnHumidityID" msprop:Generator_ColumnPropNameInRow="HumidityID" msprop:Generator_ColumnPropNameInTable="HumidityIDColumn" msprop:Generator_UserColumnName="HumidityID" type="xs:int" />
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="DateTime" msprop:Generator_ColumnVarNameInTable="columnDateTime" msprop:Generator_ColumnPropNameInRow="DateTime" msprop:Generator_ColumnPropNameInTable="DateTimeColumn" msprop:Generator_UserColumnName="DateTime" type="xs:dateTime" />
+              <xs:element name="Korngroeße60" msprop:Generator_ColumnVarNameInTable="columnKorngroeße60" msprop:Generator_ColumnPropNameInRow="Korngroeße60" msprop:Generator_ColumnPropNameInTable="Korngroeße60Column" msprop:Generator_UserColumnName="Korngroeße60" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Korngroeße90" msprop:Generator_ColumnVarNameInTable="columnKorngroeße90" msprop:Generator_ColumnPropNameInRow="Korngroeße90" msprop:Generator_ColumnPropNameInTable="Korngroeße90Column" msprop:Generator_UserColumnName="Korngroeße90" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Humidity" msprop:Generator_ColumnVarNameInTable="columnHumidity" msprop:Generator_ColumnPropNameInRow="Humidity" msprop:Generator_ColumnPropNameInTable="HumidityColumn" msprop:Generator_UserColumnName="Humidity" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Humidity" />
+      <xs:field xpath="mstns:HumidityID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
