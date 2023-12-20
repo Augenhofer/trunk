@@ -192,7 +192,7 @@ namespace Feuchte_Rapport
         {
             if (txtBoxHumidity.Text != "")
             {
-                if (Convert.ToDecimal(txtBoxHumidity.Text) < 2 && Convert.ToDouble(txtBoxHumidity.Text) > 0.1)
+                if (Convert.ToDecimal(txtBoxHumidity.Text) < 3 && Convert.ToDouble(txtBoxHumidity.Text) > 0.1)
                 {
                     DialogResult result = MessageBox.Show("Wollen Sie die Änderungen speichern?", "Information", MessageBoxButtons.YesNo);
                     if (result == DialogResult.Yes)
