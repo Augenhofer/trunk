@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -72,18 +73,34 @@ namespace Feuchte_Rapport
         {
             DialogResult result;
 
-            //if (data.connect() )
-            //{
-                if (Properties.Settings.Default.Facility == "PCI")
-                   data.groupID = 1;
-                if (Properties.Settings.Default.Facility == "Abwasserwirtschaft")
-                    data.groupID = 2;
-                if (Properties.Settings.Default.Facility == "Sandkran")
-                    data.groupID = 3;
-                if (Properties.Settings.Default.Facility == "Admin")
-                    data.groupID = 99;
+            WindowsIdentity identity = WindowsIdentity.GetCurrent();
+            WindowsPrincipal principal = new WindowsPrincipal(identity);
+            Console.WriteLine(principal.Identity.Name);
 
-                UserRights(data);
+
+
+            //if (principal.Identity.Name == @"VOESTALPINE\Kohlelab")
+            //    data.groupID = 1;
+            //else if (principal.Identity.Name == @"VOESTALPINE\HO_WASSE")
+            //    data.groupID = 2;
+            //else if (principal.Identity.Name == @"VOESTALPINE\2195_G_HO_SANDKRAN")
+            //    data.groupID = 3;
+            //else 
+            //    data.groupID = 99;
+
+
+            //if (data.connect())
+            //{
+            if (Properties.Settings.Default.Facility == "PCI")
+                data.groupID = 1;
+            if (Properties.Settings.Default.Facility == "Abwasserwirtschaft")
+                data.groupID = 2;
+            if (Properties.Settings.Default.Facility == "Sandkran")
+                data.groupID = 3;
+            if (Properties.Settings.Default.Facility == "Admin")
+                data.groupID = 99;
+
+            UserRights(data);
             //}
 
             //Verhindert das Flackern

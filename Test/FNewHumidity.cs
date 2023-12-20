@@ -47,8 +47,8 @@ namespace Feuchte_Rapport
         {
             mainConnection.ConnectionString = Properties.Settings.Default.LaPass_ConnectionString;
             mainConnection.Open();
-            sqlStatementXML = "SELECT CAST(REPLACE(CAST(XMLSigned AS nvarchar(MAX)), 'utf-8', 'utf-16') AS XML) AS XMLSigned FROM [LaPass].[dbo].[Measurements] where ID = " + ID;
-            //sqlStatementXML = "SELECT CAST(REPLACE(CAST(XML AS nvarchar(MAX)), 'utf-8', 'utf-16') AS XML) AS XMLSigned FROM [LaPass].[dbo].[MeasurementFull] where ID = 125";
+            //sqlStatementXML = "SELECT CAST(REPLACE(CAST(XMLSigned AS nvarchar(MAX)), 'utf-8', 'utf-16') AS XML) AS XMLSigned FROM [LaPass].[dbo].[Measurements] where ID = " + ID;
+            sqlStatementXML = "SELECT CAST(REPLACE(CAST(XML AS nvarchar(MAX)), 'utf-8', 'utf-16') AS XML) AS XMLSigned FROM [LaPass].[dbo].[MeasurementFull] where ID = 125";
             SqlCommand sqlCommand = new SqlCommand(sqlStatementXML, mainConnection);
             string test = sqlCommand.ExecuteScalar().ToString();
             System.IO.StringReader swXML = new System.IO.StringReader(test);

@@ -46,7 +46,7 @@ namespace Feuchte_Rapport
             if (_analge == "PCI")
             {
                 sqlDatMaintenanceDummy.SelectCommand = new SqlCommand("SELECT * FROM [LaPass].[dbo].[PCI_Information]", mainConnection);
-                labPCIInformation.Text = "PCI - Inforamtion";
+                labPCIInformation.Text = "PCI - Information";
             }
             else if (_analge == "Sewage")
             {
